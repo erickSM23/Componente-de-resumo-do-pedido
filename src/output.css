@@ -7,6 +7,10 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-red-500: oklch(0.637 0.237 25.331);
+    --color-red-600: oklch(0.577 0.245 27.325);
+    --color-blue-400: oklch(0.707 0.165 254.624);
+    --color-black: #000;
+    --color-white: #fff;
     --spacing: 0.25rem;
     --ease-in: cubic-bezier(0.4, 0, 1, 1);
     --ease-out: cubic-bezier(0, 0, 0.2, 1);
@@ -427,6 +431,9 @@
   .h-9 {
     height: calc(var(--spacing) * 9);
   }
+  .h-\[500px\] {
+    height: 500px;
+  }
   .h-screen {
     height: 100vh;
   }
@@ -439,11 +446,20 @@
   .min-h-screen {
     min-height: 100vh;
   }
+  .w-1 {
+    width: calc(var(--spacing) * 1);
+  }
   .w-1\/2 {
     width: calc(1/2 * 100%);
   }
   .w-4 {
     width: calc(var(--spacing) * 4);
+  }
+  .w-\[25\] {
+    width: 25;
+  }
+  .w-\[250px\] {
+    width: 250px;
   }
   .w-screen {
     width: 100vw;
@@ -1045,11 +1061,56 @@
   .bg-\[\#0088cc\] {
     background-color: #0088cc;
   }
+  .bg-\[\/\] {
+    background-color: /;
+  }
+  .bg-\[\/images\/0a\] {
+    background-color: /images/0a;
+  }
+  .bg-\[\/images\/\] {
+    background-color: /images/;
+  }
+  .bg-\[\/images\/pat\] {
+    background-color: /images/pat;
+  }
+  .bg-\[\/images\/pattern-background-mobile-\] {
+    background-color: /images/pattern-background-mobile-;
+  }
+  .bg-\[\/images\/pattern-background-mobile\.sv\] {
+    background-color: /images/pattern-background-mobile.sv;
+  }
+  .bg-\[\/images\/pattern-background-mobile\.svg\] {
+    background-color: /images/pattern-background-mobile.svg;
+  }
+  .bg-\[\/images\/pattern-background\] {
+    background-color: /images/pattern-background;
+  }
+  .bg-\[\/images\/pattern\] {
+    background-color: /images/pattern;
+  }
+  .bg-\[\/images\] {
+    background-color: /images;
+  }
+  .bg-\[bottom-\] {
+    background-color: bottom-;
+  }
+  .bg-\[bottom_\] {
+    background-color: bottom ;
+  }
   .bg-\[color\:var\(--my-color\)\] {
     background-color: var(--my-color);
   }
+  .bg-\[top-left\] {
+    background-color: top-left;
+  }
+  .bg-\[url\/images\/pattern-background-mobile\.svg\] {
+    background-color: url/images/pattern-background-mobile.svg;
+  }
   .bg-\[var\(--my_variable\)\] {
     background-color: var(--my_variable);
+  }
+  .bg-black {
+    background-color: var(--color-black);
   }
   .bg-red-500 {
     background-color: var(--color-red-500);
@@ -1059,6 +1120,9 @@
   }
   .bg-red-500\/\[50\%\] {
     background-color: color-mix(in oklab, var(--color-red-500) 50%, transparent);
+  }
+  .bg-white {
+    background-color: var(--color-white);
   }
   .-bg-conic {
     --tw-gradient-position: in oklab;
@@ -1071,6 +1135,15 @@
   .bg-radial {
     --tw-gradient-position: in oklab;
     background-image: radial-gradient(var(--tw-gradient-stops));
+  }
+  .bg-\[url\(\'\/images\/pattern-background-mobile\.svg\'\)\] {
+    background-image: url('/images/pattern-background-mobile.svg');
+  }
+  .bg-\[url\(\/images\/pattern-background-mobile\.svg\)\] {
+    background-image: url(/images/pattern-background-mobile.svg);
+  }
+  .bg-\[url\(images\/pattern-background-mobile\.svg\)\] {
+    background-image: url(images/pattern-background-mobile.svg);
   }
   .bg-none {
     background-image: none;
@@ -1123,6 +1196,30 @@
   }
   .bg-clip-text {
     background-clip: text;
+  }
+  .bg-\[bottom\] {
+    background-position: bottom;
+  }
+  .bg-\[bottom_left\] {
+    background-position: bottom left;
+  }
+  .bg-\[bottom_right\] {
+    background-position: bottom right;
+  }
+  .bg-\[center_center\] {
+    background-position: center center;
+  }
+  .bg-\[top\] {
+    background-position: top;
+  }
+  .bg-\[top_bottom\] {
+    background-position: top bottom;
+  }
+  .bg-\[top_center\] {
+    background-position: top center;
+  }
+  .bg-\[top_left\] {
+    background-position: top left;
   }
   .bg-bottom {
     background-position: bottom;
@@ -1359,6 +1456,9 @@
   }
   .\[color\:red\]\/50\! {
     color: color-mix(in oklab, red 50%, transparent) !important;
+  }
+  .text-black {
+    color: var(--color-black);
   }
   .capitalize {
     text-transform: capitalize;
@@ -1801,11 +1901,63 @@
   .transform-view {
     transform-box: view-box;
   }
+  .portrait\:bg-\[url\(images\/pattern-background-mobile\.svg\)\] {
+    @media (orientation: portrait) {
+      background-image: url(images/pattern-background-mobile.svg);
+    }
+  }
+  .landscape\:bg-\[cente\] {
+    @media (orientation: landscape) {
+      background-color: cente;
+    }
+  }
+  .landscape\:bg-blue-400 {
+    @media (orientation: landscape) {
+      background-color: var(--color-blue-400);
+    }
+  }
+  .landscape\:bg-blue-400\/10 {
+    @media (orientation: landscape) {
+      background-color: color-mix(in oklab, var(--color-blue-400) 10%, transparent);
+    }
+  }
+  .landscape\:bg-blue-400\/20 {
+    @media (orientation: landscape) {
+      background-color: color-mix(in oklab, var(--color-blue-400) 20%, transparent);
+    }
+  }
+  .landscape\:bg-blue-400\/50 {
+    @media (orientation: landscape) {
+      background-color: color-mix(in oklab, var(--color-blue-400) 50%, transparent);
+    }
+  }
+  .landscape\:bg-blue-400\/100 {
+    @media (orientation: landscape) {
+      background-color: color-mix(in oklab, var(--color-blue-400) 100%, transparent);
+    }
+  }
+  .landscape\:bg-red-600 {
+    @media (orientation: landscape) {
+      background-color: var(--color-red-600);
+    }
+  }
+  .landscape\:bg-\[center_top\] {
+    @media (orientation: landscape) {
+      background-position: center top;
+    }
+  }
+  .landscape\:bg-\[top\] {
+    @media (orientation: landscape) {
+      background-position: top;
+    }
+  }
+  .landscape\:bg-\[top_left\] {
+    @media (orientation: landscape) {
+      background-position: top left;
+    }
+  }
 }
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
-body {
-  color: hsl(225, 100%, 98%);
-}
 @property --tw-translate-x {
   syntax: "*";
   inherits: false;
