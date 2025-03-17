@@ -20,27 +20,27 @@
 </head>
 <body class="font-['Red_Hat_Display'] text-[16px] w-screen min-h-screen">
   <main class="w-screen min-h-screen flex flex-row justify-center items-center portrait:bg-[url(images/pattern-background-mobile.svg)] bg-cover bg-no-repeat bg-[top_left] landscape:bg-blue-400/20">
-    <section class="bg-white w-[250px] h-[500px]">
-      <div id="imagem">
-        imagem
+    <section class="bg-white w-[80vw] h-[600px] rounded-tr-[20px] rounded-tl-[20px] rounded-bl-[20px] rounded-br-[20px]">
+      <div id="imagem" class="h-[150px] bg-[url(images/illustration-hero.svg)] bg-cover bg-[center_center] rounded-tl-[20px] rounded-tr-[20px]">
       </div>
-      <div id="conteudo">
-        <h1>Order Summary</h1>
-        <p>
-          You can now listen to millions of songs, audiobooks, and podcasts on any
-          device anywhere you like!  
-        </p>
-        <div>
-          <img src="images/icon-music.svg" alt="icone da musica">
-          <div>
-            <p>Annual Plan</p>
-            <p>$59.99/year</p>
+      <div id="conteudo" class="h-[450px] rounded-bl-[20px] rounded-br-[20px]">
+        <div id="dsp" class="grid h-[350px] content-start justify-center justify-items-center text-center rounded-bl-[20px] rounded-br-[20px] p-[20px]">
+          <h1 class="text-[27px] font-[1000] text-[#1f2f56] pb-[20px] pt-[10px]">Order Summary</h1>
+          <p class="max-w-[260px] pb-[30px] text-[#7280a7]">
+            You can now listen to millions of songs, audiobooks, and podcasts on any
+            device anywhere you like!
+          </p>
+          <div id="meio" class="grid grid-cols-[1fr_1fr_2fr] h-[90px] justify-center items-center content-center rounded-[10px] bg-[#f5f7ff] mb-[30px]">
+            <img src="images/icon-music.svg" alt="icone da musica" class="block m-auto">
+            <div id="duo" class="grid grid-cols-[1fr] items-center justify-items-center">
+              <p class="font-extrabold text-[15px]">Annual Plan</p>
+              <p class="text-[#7280a7] font-semibold">$59.99/year</p>
+            </div>
+            <a href="#" class="text-[#3829e0] decoration-1 underline font-bold hover:cursor-pointer hover:no-underline hover:text-[#3829e0a1]">Change</a>
           </div>
-          <a href="#">Change</a>
+          <a href="#" class="bg-[#3829e0] w-full p-[15px] rounded-[10px] text-[white] font-extrabold mb-[30px] hover:bg-[#3829e0ab] hover:cursor-pointer">Proceed to Payment</a>
+          <a href="#" class="w-full font-extrabold text-[#7280a7] hover:text-[#1f2f56] hover:cursor-pointer">Cancel Order</a>
         </div>
-        <a href="#">Proceed to Payment</a>
-        <a href="#">Cancel Order</a>
-      </div>
     </section>
   </main>
 </body>
